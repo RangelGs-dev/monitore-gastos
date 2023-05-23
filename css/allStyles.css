@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, h1, h2, h3, ul, li, p, div {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+  font-size: 16px;
+  background: #292929;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.main-container {
+  display: grid;
+  justify-content: center;
+  width: 100vw;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.content {
+  display: grid;
+  width: 50vw;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: bolder;
+  letter-spacing: .1em;
+  color: #FFFFFF;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #F0725C;
+}
+
+.menu .closeBtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+
+.openBtn {
+  position: absolute;
+  top: 11px;
+  left: 25px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #0000;
+  border: none;
+  transition: 0.5s;
+}
+
+.openBtn:hover {
+  color: #F0725C;
+}
+
+.openBtn {
+  transition: margin-left .5s;
+}
+
+.menu > p {
+  font-size: 0.700rem;
+  font-weight: bolder;
+  margin-left: 32px;
+  white-space: nowrap;
+}
+
+.greetings {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  grid-column: 1 / -1;
+  padding-bottom: 15px;
+}
+
+.greetings h3 {
+  font-size: 0.700rem;
+  font-weight: bolder;
+}
+
+.balance {
+  grid-column: 1 / -1;
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+} 
+
+.balance h1 {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.balance-value {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.counts-card {
+  font-size: 0.875rem;
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.counts {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 26px;  
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+}
+
+.counts span {
+  font-size: 0.875rem;
+  font-weight: bolder;
+  margin-right: 10px;
+}
+
+.detail-category {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.amount {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 180px;
+  font-size: 1rem;
+  font-weight: bolder;
+}

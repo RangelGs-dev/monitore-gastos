@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Monitore gastos</title>
+</head>
+<body>
+    
+    <div class="main-container">
+        <div class="content">            
+            <div class="greetings">
+                <h3>Olá Rangel</h3>
+                <span>
+                    Você lançou <span class="count-expense">1</span> despesa     
+                </span>
+            </div>
+            
+            <nav class="menu mySidebar">    
+                <a class="closeBtn">×</a>
+                <ul class="myLinks">
+                    <li><a href="#transaction">Transação</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="https://github.com/RangelGs-dev">Dev</a></li>
+                </ul>
+                <p>Powered by Rangel Gs</p>
+            </nav>
+            <span class="main">
+                <button class="openBtn">☰</button>
+            </span>
+
+            <section class="balance cards">
+                <h1>Meu saldo 💰</h1>
+                <span class="balance-value">
+                    R$ 748,00
+                </span>
+
+            </section>
+
+            <span class="counts-card">Despesas 💵</span>
+            <!-- <section class="counts cards">
+                <div class="detail-category">
+                    <span class="category">Inter</span>
+                    <p class="description">Compras</p>
+                </div>
+                
+                <p class="amount">
+                    R$ 148,00
+                </p>
+
+            </section> -->
+        </div>    
+    </div>
+
+    <section class="modal-container">
+        <div class="modal-content">
+            <a class="closeBtnModal">×</a>
+            <form name="transactions" class="forms">
+                <label for="amount">Valor</label>
+                <input type="number" name="amount" id="amount" placeholder="Valor" required title="Por favor, preencha com o valor da transação.">
+
+                <label for="category">Categoria</label>
+                <input type="text" name="category" id="category" placeholder="Categoria" required title="Por favor, preencha com a categoria.">
+
+                <label for="description">Descrição</label>
+                <input type="text" name="description" id="description" placeholder="Descrição" required title="Prencha com um comentário, pode ser util ao tentar lembrar.">
+
+                <input type="submit" value="Adicionar" id="btnSubmit">
+            </form>
+
+        </div>
+    </section>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
+
+
+<!-- =================================================
+
+01º tela
+Balanço = Salario + Renda extra - Despesas - Crédito
+
+
+
+Contas = Todas as contas do usuario 
+
+=================================================
+
+02º tela
+Transações = Recebidas & Trasac. gastos
+
+=================================================
+
+03º tela
+
+Cartões = Soma de gastos por cartão do usuário
+Obs.: gastos por compra sem detalhe de itens. -->
