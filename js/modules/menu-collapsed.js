@@ -4,7 +4,7 @@ export default function munuCollapsed() {
 
     function openNav() {
         document.querySelector(".mySidebar").style.width = "250px";
-        document.querySelector(".main-container").style.marginLeft = "250px";
+        //document.querySelector(".main-container").style.marginLeft = "250px";
         document.querySelector(".main").style.display = "none";
     };
     openBtn.addEventListener('click', openNav);
