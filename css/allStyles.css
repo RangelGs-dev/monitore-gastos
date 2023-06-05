@@ -17,7 +17,7 @@ body {
   background: #292929;
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -132,9 +132,15 @@ body {
 }
 
 .balance-value {
+  display: flex;
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: bold;
+  letter-spacing: .1em;
+}
+
+.balance-value > p {
+  margin-right: 5px;
 }
 
 .counts-card {

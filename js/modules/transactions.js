@@ -19,6 +19,7 @@ function getDataObject(forms) {
 
 function updateDataItems() {
     localStorage.setItem('listTransactionCards', JSON.stringify(data))
+    updateTotal()
 }
 
 function handleSubmit(event) {
@@ -32,6 +33,19 @@ function countExpenses() {
     countValue.innerText = data.items.length
 }
 
+const balanceValue = document.querySelector('.balance-value')
+
+function updateTotal() {
+    const vTotal = data.items.reduce(function(acc, valorAtual){
+        let amountNumber = parseFloat(valorAtual.amount)
+        return acc + amountNumber
+    },0)
+    updateBalance(vTotal)
+}
+
+function updateBalance(vTotal) {
+    balanceValue.innerText = `R$ ${vTotal.toFixed(2).toLocaleString('pt-Br')}`;
+}
 
 const btnSubmit = document.querySelector('#btnSubmit');
 btnSubmit.addEventListener('click', handleSubmit);
@@ -72,4 +86,7 @@ function populateTransactionCards() {
         addTransactionCard(objectDataForm);
     });
 }
+
+updateDataItems()
+
 export default data;
